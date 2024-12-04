@@ -17,21 +17,12 @@
 img {
   display: block;
   max-width: 100%;
+  align-self: flex-start;
 }
 
 .container {
   width: min(90%, 1200px);
   margin: 0 auto;
-}
-
-.columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 5%;
-}
-
-.section--green .columns {
-  flex-direction: row-reverse;
 }
 
 .center {
@@ -40,7 +31,7 @@ img {
 
 .header {
   background-color: var(--light-color);
-  padding: 10em;
+  padding: 10em 1em;
 }
 
 .author {
@@ -53,9 +44,8 @@ img {
 .header__title {
   font-family: "Playfair Display", serif;
   font-weight: 900;
-  max-width: 800px;
   font-size: 4rem;
-  margin: 1rem auto 0;
+  margin: 0 auto;
   line-height: 4.4rem;
   color: var(--dark-green-color);
 }
@@ -71,6 +61,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 21px;
+  margin-bottom: 2rem;
 }
 
 .col {
@@ -89,9 +80,6 @@ p {
   color: var(--light-color);
 }
 
-.section--white {
-}
-
 .section--black {
   background-color: var(--black-color);
   color: #fff;
@@ -100,4 +88,20 @@ p {
 .section--green {
   background-color: var(--dark-green-color);
   color: #fff;
+}
+
+@media (min-width: 800px) {
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+  }
+
+  .section--green .columns {
+    flex-direction: row-reverse;
+  }
+
+  .header__title {
+    max-width: 800px;
+  }
 }
